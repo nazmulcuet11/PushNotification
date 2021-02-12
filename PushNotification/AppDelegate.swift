@@ -12,7 +12,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
+        requestNotificationPermission(for: application)
+        
         return true
     }
 
@@ -28,6 +29,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+
+    // MARK: - Helpers
+
+    private func requestNotificationPermission(for application: UIApplication) {
+        UNUserNotificationCenter.current()
+            .requestAuthorization(
+                options: [.badge, .alert, .sound],
+                completionHandler: {
+                    self.notificationPermissionHandler(application, granted: $0, error: $1)
+                })
+    }
+
+    private func notificationPermissionHandler(_ application: UIApplication, granted: Bool, error: Error?) {
+        if let error = error {
+            print("Notification permission error: \(error.localizedDescription)")
+            return
+        }
+
+        print("Notifacation permission granted: \(granted)")
+
+        if granted {
+            onMain(application.registerForRemoteNotifications)
+        }
     }
 }
 
