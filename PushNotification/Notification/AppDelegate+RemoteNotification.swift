@@ -71,21 +71,40 @@ extension AppDelegate {
     // MARK: - Helpers
     
     private func registerCustomNotificationActions() {
-        let accept = UNNotificationAction(
-            identifier: NotificationCategoryActionIdentifier.accept.rawValue,
-            title: "Action"
-        )
-        let reject = UNNotificationAction(
-            identifier: NotificationCategoryActionIdentifier.reject.rawValue,
-            title: "Reject"
-        )
+        let accept = makeUNNotificationAction(for: .accept)
+        let reject = makeUNNotificationAction(for: .reject)
+        let acceptReject = makeUNNotificationCategory(for: .acceptOrReject, actions: [accept, reject])
 
-        let category = UNNotificationCategory(
-            identifier: NotificationCategoryIdentifier.acceptOrReject.rawValue,
-            actions: [accept, reject],
-            intentIdentifiers: [])
+        let comment = makeUNNotificationAction(for: .comment)
+        let showMap = makeUNNotificationCategory(for: .showMap, actions: [comment])
 
         UNUserNotificationCenter.current()
-            .setNotificationCategories([category])
+            .setNotificationCategories([acceptReject, showMap])
+    }
+
+    private func makeUNNotificationAction(for identifier: NotificationCategoryActionIdentifier) -> UNNotificationAction {
+
+        switch identifier {
+        case .accept, .reject:
+            return UNNotificationAction(
+                identifier: identifier.rawValue,
+                title: identifier.title
+            )
+        case .comment:
+            return UNTextInputNotificationAction(
+                identifier: identifier.rawValue,
+                title: identifier.title
+            )
+        }
+
+    }
+    
+    private func makeUNNotificationCategory(for identifier: NotificationCategoryIdentifier, actions: [UNNotificationAction] = [], intentIdentifiers: [String] = []) -> UNNotificationCategory {
+
+        return UNNotificationCategory(
+            identifier: identifier.rawValue,
+            actions: actions,
+            intentIdentifiers: []
+        )
     }
 }

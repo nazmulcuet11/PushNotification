@@ -13,12 +13,15 @@ enum NotificationCategoryIdentifier: String {
 }
 
 enum NotificationCategoryActionIdentifier: String {
-    case accept, reject
+    case accept
+    case reject
+    case comment
 
     var title: String {
         switch self {
         case .accept: return "Accept"
         case .reject: return "Reject"
+        case .comment: return "Comment"
         }
     }
 }
