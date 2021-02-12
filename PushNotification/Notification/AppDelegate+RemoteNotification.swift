@@ -71,40 +71,7 @@ extension AppDelegate {
     // MARK: - Helpers
     
     private func registerCustomNotificationActions() {
-        let accept = makeUNNotificationAction(for: .accept)
-        let reject = makeUNNotificationAction(for: .reject)
-        let acceptReject = makeUNNotificationCategory(for: .acceptOrReject, actions: [accept, reject])
-
-        let comment = makeUNNotificationAction(for: .comment)
-        let showMap = makeUNNotificationCategory(for: .showMap, actions: [comment])
-
         UNUserNotificationCenter.current()
-            .setNotificationCategories([acceptReject, showMap])
-    }
-
-    private func makeUNNotificationAction(for identifier: NotificationCategoryActionIdentifier) -> UNNotificationAction {
-
-        switch identifier {
-        case .accept, .reject:
-            return UNNotificationAction(
-                identifier: identifier.rawValue,
-                title: identifier.title
-            )
-        case .comment:
-            return UNTextInputNotificationAction(
-                identifier: identifier.rawValue,
-                title: identifier.title
-            )
-        }
-
-    }
-    
-    private func makeUNNotificationCategory(for identifier: NotificationCategoryIdentifier, actions: [UNNotificationAction] = [], intentIdentifiers: [String] = []) -> UNNotificationCategory {
-
-        return UNNotificationCategory(
-            identifier: identifier.rawValue,
-            actions: actions,
-            intentIdentifiers: []
-        )
+            .setNotificationCategories([.acceptOrReject, .showMap])
     }
 }

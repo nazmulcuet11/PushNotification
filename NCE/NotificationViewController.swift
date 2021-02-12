@@ -36,17 +36,31 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
                                         longitudinalMeters: radius)
 
         mapView.setRegion(region, animated: true)
+
+        extensionContext?.notificationActions = [.accept]
     }
 
     func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
 
-        defer { completion(.dismiss) }
+//        defer { completion(.dismiss) }
+//        guard let response = response as? UNTextInputNotificationResponse else {
+//            return
+//        }
+//        let text = response.userText
+//        print("User responded with: \(text)")
 
-        guard let response = response as? UNTextInputNotificationResponse else {
-            return
+        defer { completion(.doNotDismiss) }
+
+        let accept = NotificationCategoryActionIdentifier.accept.rawValue
+        let cancel = NotificationCategoryActionIdentifier.cancel.rawValue
+
+        switch response.actionIdentifier {
+        case accept:
+            extensionContext?.notificationActions = [.cancel]
+        case cancel:
+            extensionContext?.notificationActions = [.accept]
+        default:
+            break
         }
-
-        let text = response.userText
-        print("User responded with: \(text)")
     }
 }

@@ -34,6 +34,14 @@
 		9A42962F25D6AF1E00E822DE /* NCE.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A42962025D6AF1E00E822DE /* NCE.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A42964F25D6B0D500E822DE /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4295FC25D69EB900E822DE /* UserDefaults+Extensions.swift */; };
 		9A42965425D6B11100E822DE /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42965325D6B11100E822DE /* NotificationConstants.swift */; };
+		9A73B9DC25D6C4D40049A962 /* UNNotificationAction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73B9DB25D6C4D40049A962 /* UNNotificationAction+Extension.swift */; };
+		9A73B9E325D6C5660049A962 /* UNNotificationAction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73B9DB25D6C4D40049A962 /* UNNotificationAction+Extension.swift */; };
+		9A73B9E725D6C56A0049A962 /* UNNotificationAction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73B9DB25D6C4D40049A962 /* UNNotificationAction+Extension.swift */; };
+		9A73B9EB25D6C5730049A962 /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42965325D6B11100E822DE /* NotificationConstants.swift */; };
+		9A73B9EF25D6C5740049A962 /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42965325D6B11100E822DE /* NotificationConstants.swift */; };
+		9A73B9F425D6C7640049A962 /* UNNotificationCategory+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73B9F325D6C7640049A962 /* UNNotificationCategory+Extension.swift */; };
+		9A73B9F825D6C84D0049A962 /* UNNotificationCategory+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73B9F325D6C7640049A962 /* UNNotificationCategory+Extension.swift */; };
+		9A73B9FC25D6C84E0049A962 /* UNNotificationCategory+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73B9F325D6C7640049A962 /* UNNotificationCategory+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +105,8 @@
 		9A42962A25D6AF1E00E822DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		9A42962C25D6AF1E00E822DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A42965325D6B11100E822DE /* NotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
+		9A73B9DB25D6C4D40049A962 /* UNNotificationAction+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UNNotificationAction+Extension.swift"; sourceTree = "<group>"; };
+		9A73B9F325D6C7640049A962 /* UNNotificationCategory+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UNNotificationCategory+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				9A42965325D6B11100E822DE /* NotificationConstants.swift */,
+				9A73B9DB25D6C4D40049A962 /* UNNotificationAction+Extension.swift */,
+				9A73B9F325D6C7640049A962 /* UNNotificationCategory+Extension.swift */,
 				9A0F86E025D64BFC00F70322 /* AppDelegate+RemoteNotification.swift */,
 				9A4295D825D6530700E822DE /* NotifcationDelegate.swift */,
 			);
@@ -368,6 +380,8 @@
 				9A42965425D6B11100E822DE /* NotificationConstants.swift in Sources */,
 				7C73C66125D61F3E00C6314B /* AppDelegate.swift in Sources */,
 				9A42960525D6A40A00E822DE /* DataModel.xcdatamodeld in Sources */,
+				9A73B9DC25D6C4D40049A962 /* UNNotificationAction+Extension.swift in Sources */,
+				9A73B9F425D6C7640049A962 /* UNNotificationCategory+Extension.swift in Sources */,
 				9A0F86E125D64BFC00F70322 /* AppDelegate+RemoteNotification.swift in Sources */,
 				9A42960B25D6A62200E822DE /* Person+CoreDataClass.swift in Sources */,
 				9A42960D25D6A62200E822DE /* Person+CoreDataProperties.swift in Sources */,
@@ -383,7 +397,10 @@
 			files = (
 				9A42961925D6AA4E00E822DE /* Database.swift in Sources */,
 				9A42960C25D6A62200E822DE /* Person+CoreDataClass.swift in Sources */,
+				9A73B9EB25D6C5730049A962 /* NotificationConstants.swift in Sources */,
 				9A42960E25D6A62200E822DE /* Person+CoreDataProperties.swift in Sources */,
+				9A73B9E725D6C56A0049A962 /* UNNotificationAction+Extension.swift in Sources */,
+				9A73B9F825D6C84D0049A962 /* UNNotificationCategory+Extension.swift in Sources */,
 				9A4295EE25D696F100E822DE /* NotificationService.swift in Sources */,
 				9A42964F25D6B0D500E822DE /* UserDefaults+Extensions.swift in Sources */,
 				9A42960625D6A40A00E822DE /* DataModel.xcdatamodeld in Sources */,
@@ -394,7 +411,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A73B9EF25D6C5740049A962 /* NotificationConstants.swift in Sources */,
+				9A73B9FC25D6C84E0049A962 /* UNNotificationCategory+Extension.swift in Sources */,
 				9A42962825D6AF1E00E822DE /* NotificationViewController.swift in Sources */,
+				9A73B9E325D6C5660049A962 /* UNNotificationAction+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
