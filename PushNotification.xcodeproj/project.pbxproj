@@ -14,6 +14,7 @@
 		7C73C66A25D61F3F00C6314B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C73C66925D61F3F00C6314B /* Assets.xcassets */; };
 		7C73C66D25D61F3F00C6314B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C73C66B25D61F3F00C6314B /* LaunchScreen.storyboard */; };
 		7C73C67825D629BC00C6314B /* GlobalHelperMethodss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73C67725D629BC00C6314B /* GlobalHelperMethodss.swift */; };
+		9A0F86E125D64BFC00F70322 /* AppDelegate+RemoteNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0F86E025D64BFC00F70322 /* AppDelegate+RemoteNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		7C73C66E25D61F3F00C6314B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C73C67525D61FD100C6314B /* PushNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushNotification.entitlements; sourceTree = "<group>"; };
 		7C73C67725D629BC00C6314B /* GlobalHelperMethodss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelperMethodss.swift; sourceTree = "<group>"; };
+		9A0F86E025D64BFC00F70322 /* AppDelegate+RemoteNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+RemoteNotification.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				7C73C67525D61FD100C6314B /* PushNotification.entitlements */,
 				7C73C66025D61F3E00C6314B /* AppDelegate.swift */,
+				9A0F86E025D64BFC00F70322 /* AppDelegate+RemoteNotification.swift */,
 				7C73C66225D61F3E00C6314B /* SceneDelegate.swift */,
 				7C73C66425D61F3E00C6314B /* ViewController.swift */,
 				7C73C66625D61F3E00C6314B /* Main.storyboard */,
@@ -145,6 +148,7 @@
 				7C73C66525D61F3E00C6314B /* ViewController.swift in Sources */,
 				7C73C67825D629BC00C6314B /* GlobalHelperMethodss.swift in Sources */,
 				7C73C66125D61F3E00C6314B /* AppDelegate.swift in Sources */,
+				9A0F86E125D64BFC00F70322 /* AppDelegate+RemoteNotification.swift in Sources */,
 				7C73C66325D61F3E00C6314B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
