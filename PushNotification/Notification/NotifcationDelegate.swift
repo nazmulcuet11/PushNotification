@@ -11,16 +11,19 @@ import UserNotifications
 final class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
 
+        print(#function)
+        let userInfo = notification.request.content.userInfo
+        print(userInfo)
+        
         completionHandler([.badge, .list, .banner, .sound])
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         defer { completionHandler() }
 
-
         let identity = response.notification.request.content.categoryIdentifier
-        if identity == NotificationCategory.acceptOrReject.rawValue {
-            if let action = NotificationCategoryAction(rawValue: response.actionIdentifier) {
+        if identity == NotificationCategoryIdentifier.acceptOrReject.rawValue {
+            if let action = NotificationCategoryActionIdentifier(rawValue: response.actionIdentifier) {
                 print(action)
             }
         }
