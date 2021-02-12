@@ -13,8 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         requestNotificationPermission(for: application)
-        
+
         return true
+    }
+
+    // MARK: - Remote Notification
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenStr = parseHexData(deviceToken)
+        print("Registered successfully for remote notification. Device Token: \(tokenStr)")
+    }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register for remote notification, error: \(error.localizedDescription)")
     }
 
     // MARK: UISceneSession Lifecycle

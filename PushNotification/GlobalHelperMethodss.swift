@@ -10,3 +10,7 @@ import Foundation
 func onMain(_ work: @escaping () -> Void) {
     DispatchQueue.main.async(execute: work)
 }
+
+func parseHexData(_ data: Data) -> String {
+    return data.reduce("") { $0 + String(format: "%02x", $1) }
+}
