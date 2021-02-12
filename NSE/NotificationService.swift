@@ -23,7 +23,15 @@ class NotificationService: UNNotificationServiceExtension {
         if let bestAttemptContent = bestAttemptContent {
             // Modify the notification content here...
             bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
-            
+
+            if let incr = bestAttemptContent.badge as? Int {
+                let current = UserDefaults.apppGroup.badge
+                let new = current + incr
+
+                UserDefaults.apppGroup.badge = new
+                bestAttemptContent.badge = NSNumber(value: new)
+            }
+
             contentHandler(bestAttemptContent)
         }
     }
