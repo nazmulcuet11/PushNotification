@@ -20,6 +20,14 @@
 		9A4295F225D696F100E822DE /* NSE.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A4295EB25D696F100E822DE /* NSE.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A4295FD25D69EB900E822DE /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4295FC25D69EB900E822DE /* UserDefaults+Extensions.swift */; };
 		9A42960025D6A06800E822DE /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4295FC25D69EB900E822DE /* UserDefaults+Extensions.swift */; };
+		9A42960525D6A40A00E822DE /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A42960325D6A40A00E822DE /* DataModel.xcdatamodeld */; };
+		9A42960625D6A40A00E822DE /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A42960325D6A40A00E822DE /* DataModel.xcdatamodeld */; };
+		9A42960B25D6A62200E822DE /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42960925D6A62200E822DE /* Person+CoreDataClass.swift */; };
+		9A42960C25D6A62200E822DE /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42960925D6A62200E822DE /* Person+CoreDataClass.swift */; };
+		9A42960D25D6A62200E822DE /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42960A25D6A62200E822DE /* Person+CoreDataProperties.swift */; };
+		9A42960E25D6A62200E822DE /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42960A25D6A62200E822DE /* Person+CoreDataProperties.swift */; };
+		9A42961625D6AA4C00E822DE /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42961525D6AA4C00E822DE /* Database.swift */; };
+		9A42961925D6AA4E00E822DE /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A42961525D6AA4C00E822DE /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +72,10 @@
 		9A4295EF25D696F100E822DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A4295F925D69DED00E822DE /* NSE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSE.entitlements; sourceTree = "<group>"; };
 		9A4295FC25D69EB900E822DE /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		9A42960425D6A40A00E822DE /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		9A42960925D6A62200E822DE /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataClass.swift"; path = "PushNotification/Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9A42960A25D6A62200E822DE /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataProperties.swift"; path = "PushNotification/Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9A42961525D6AA4C00E822DE /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,8 @@
 		7C73C65425D61F3E00C6314B = {
 			isa = PBXGroup;
 			children = (
+				9A42960925D6A62200E822DE /* Person+CoreDataClass.swift */,
+				9A42960A25D6A62200E822DE /* Person+CoreDataProperties.swift */,
 				7C73C65F25D61F3E00C6314B /* PushNotification */,
 				9A4295EC25D696F100E822DE /* NSE */,
 				7C73C65E25D61F3E00C6314B /* Products */,
@@ -107,6 +121,7 @@
 			children = (
 				7C73C67525D61FD100C6314B /* PushNotification.entitlements */,
 				7C73C66025D61F3E00C6314B /* AppDelegate.swift */,
+				9A42961525D6AA4C00E822DE /* Database.swift */,
 				9A0F86E025D64BFC00F70322 /* AppDelegate+RemoteNotification.swift */,
 				9A4295D825D6530700E822DE /* NotifcationDelegate.swift */,
 				7C73C66225D61F3E00C6314B /* SceneDelegate.swift */,
@@ -117,6 +132,7 @@
 				7C73C66E25D61F3F00C6314B /* Info.plist */,
 				7C73C67725D629BC00C6314B /* GlobalHelperMethodss.swift */,
 				9A4295FC25D69EB900E822DE /* UserDefaults+Extensions.swift */,
+				9A42960325D6A40A00E822DE /* DataModel.xcdatamodeld */,
 			);
 			path = PushNotification;
 			sourceTree = "<group>";
@@ -232,9 +248,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C73C66525D61F3E00C6314B /* ViewController.swift in Sources */,
+				9A42961625D6AA4C00E822DE /* Database.swift in Sources */,
 				7C73C67825D629BC00C6314B /* GlobalHelperMethodss.swift in Sources */,
 				7C73C66125D61F3E00C6314B /* AppDelegate.swift in Sources */,
+				9A42960525D6A40A00E822DE /* DataModel.xcdatamodeld in Sources */,
 				9A0F86E125D64BFC00F70322 /* AppDelegate+RemoteNotification.swift in Sources */,
+				9A42960B25D6A62200E822DE /* Person+CoreDataClass.swift in Sources */,
+				9A42960D25D6A62200E822DE /* Person+CoreDataProperties.swift in Sources */,
 				9A4295FD25D69EB900E822DE /* UserDefaults+Extensions.swift in Sources */,
 				7C73C66325D61F3E00C6314B /* SceneDelegate.swift in Sources */,
 				9A4295D925D6530700E822DE /* NotifcationDelegate.swift in Sources */,
@@ -245,8 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A42961925D6AA4E00E822DE /* Database.swift in Sources */,
+				9A42960C25D6A62200E822DE /* Person+CoreDataClass.swift in Sources */,
+				9A42960E25D6A62200E822DE /* Person+CoreDataProperties.swift in Sources */,
 				9A42960025D6A06800E822DE /* UserDefaults+Extensions.swift in Sources */,
 				9A4295EE25D696F100E822DE /* NotificationService.swift in Sources */,
+				9A42960625D6A40A00E822DE /* DataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +533,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9A42960325D6A40A00E822DE /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9A42960425D6A40A00E822DE /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 9A42960425D6A40A00E822DE /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C73C65525D61F3E00C6314B /* Project object */;
 }

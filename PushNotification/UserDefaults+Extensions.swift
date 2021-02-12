@@ -8,8 +8,9 @@
 import Foundation
 
 extension UserDefaults {
-    static let suitName = "group.com.tigeritfoundation.PushNotification"
-    static let apppGroup = UserDefaults(suiteName: suitName)!
+    // use group name as suit name to sync data between main app and nse
+    static let groupSuitName = "group.com.tigeritfoundation.PushNotification"
+    static let apppGroup = UserDefaults(suiteName: groupSuitName)!
 
     private enum Keys {
         static let badge = "badge"
